@@ -1,0 +1,49 @@
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #f6f6f6;
+  padding-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  width: 70px;
+  margin-right: 17px;
+}
+
+.logoTitle {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.logoText {
+  color: #7b7b7b;
+  font-size: 16px;
+}
+
+.search {
+  position: relative;
+}
+.searchInput {
+  font-size: 16px;
+  padding: 0 15px 0 45px;
+  width: 350px;
+  height: 51px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}

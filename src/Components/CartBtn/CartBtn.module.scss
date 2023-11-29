@@ -1,0 +1,26 @@
+.cartBtn {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #fe5f1e;
+
+  .column {
+    width: 1px;
+    height: 25px;
+    background: #fff;
+    margin: 0 13px;
+  }
+
+  .count {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 8px;
+    }
+  }
+}

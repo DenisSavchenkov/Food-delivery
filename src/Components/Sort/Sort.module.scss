@@ -1,0 +1,20 @@
+.sort {
+  display: flex;
+  align-items: center;
+  color: #2c2c2c;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.21px;
+  cursor: pointer;
+}
+
+.sortIcon {
+  margin-right: 7px;
+  transition: all 0.3s;
+}
+
+.sortIconAsc {
+  margin-right: 7px;
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
