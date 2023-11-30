@@ -1,9 +1,11 @@
-import { ProductsListProp } from '../../Types';
 import ProductItem from '../ProductItem';
 import { FC } from 'react';
 import styles from './ProductList.module.scss';
+import { useAppSelector } from '../../redux/hooks';
 
-const ProductList: FC<ProductsListProp> = ({ products }) => {
+const ProductList: FC = () => {
+  const { products } = useAppSelector((state) => state.getProducts);
+
   return (
     <ul className={styles.productList}>
       {products.map((product) => {

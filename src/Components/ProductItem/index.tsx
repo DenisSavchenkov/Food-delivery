@@ -1,14 +1,8 @@
 import { FC } from 'react';
 import styles from './ProductItem.module.scss';
-import { ProductsItemProp } from '../../Types';
+import { Product } from '../../Types';
 
-const ProductItem: FC<ProductsItemProp> = ({
-  imageURL,
-  title,
-  description,
-  price,
-  weight,
-}) => {
+const ProductItem: FC<Product> = ({ imageURL, title, weight, description }) => {
   return (
     <li className={styles.productItem}>
       <img className={styles.img} src={imageURL} alt="img" />
@@ -20,7 +14,6 @@ const ProductItem: FC<ProductsItemProp> = ({
         </div>
       </div>
       <div className={styles.bottom}>
-        <span className={styles.price}>{price} ₽</span>
         <button className={styles.btn}>
           <svg
             width="12"

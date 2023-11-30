@@ -1,4 +1,5 @@
 import styles from './Categories.module.scss';
+import React from 'react';
 
 const categories = [
   'Все',
@@ -12,15 +13,17 @@ const categories = [
   'Соусы',
 ];
 
-const Categories = ({ activeIndex, onClickCategory }) => {
+const Categories: React.FC = () => {
+  const [activeIndex, setActiveIndex] = React.useState<number>(0);
+
   return (
     <ul className={styles.categories}>
-      {categories.map((category, index) => {
+      {categories.map((category: string, index: number) => {
         return (
           <li
-            onClick={() => onClickCategory(category, index)}
+            onClick={() => setActiveIndex(index)}
             className={
-              index === activeIndex ? styles.activeCategory : styles.category
+              activeIndex === index ? styles.activeCategory : styles.category
             }
             key={index}
           >
