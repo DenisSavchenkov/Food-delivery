@@ -2,12 +2,12 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Product } from '../../Types';
 
-export const fetchProducts = createAsyncThunk<Product[]>(
+export const fetchProducts = createAsyncThunk<Product[], string[]>(
   'users/fetchByIdStatus',
-  async () => {
+  async ([filterCategory, filterSort, filterOrder]) => {
     try {
       const { data } = await axios.get(
-        `https://651811de582f58d62d355bdb.mockapi.io/products`
+        `https://651811de582f58d62d355bdb.mockapi.io/products?sortBy=${filterSort}&order=${filterOrder}${filterCategory}`
       );
 
       return data;

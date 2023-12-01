@@ -2,7 +2,13 @@ import { FC } from 'react';
 import styles from './ProductItem.module.scss';
 import { Product } from '../../Types';
 
-const ProductItem: FC<Product> = ({ imageURL, title, weight, description }) => {
+const ProductItem: FC<Product> = ({
+  imageURL,
+  title,
+  weight,
+  description,
+  price,
+}) => {
   return (
     <li className={styles.productItem}>
       <img className={styles.img} src={imageURL} alt="img" />
@@ -14,6 +20,7 @@ const ProductItem: FC<Product> = ({ imageURL, title, weight, description }) => {
         </div>
       </div>
       <div className={styles.bottom}>
+        <span className={styles.price}>{price} ₽</span>
         <button className={styles.btn}>
           <svg
             width="12"
@@ -27,7 +34,6 @@ const ProductItem: FC<Product> = ({ imageURL, title, weight, description }) => {
               fill="#EB5A1E"
             />
           </svg>
-
           <span className={styles.btnText}> Добавить</span>
         </button>
       </div>

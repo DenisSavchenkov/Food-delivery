@@ -1,7 +1,9 @@
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import { setActiveCategory } from '../../redux/slices/filterSlice';
 import styles from './Categories.module.scss';
 import React from 'react';
 
-const categories = [
+export const categories = [
   'Все',
   'Роллы',
   'Суши',
@@ -14,16 +16,17 @@ const categories = [
 ];
 
 const Categories: React.FC = () => {
-  const [activeIndex, setActiveIndex] = React.useState<number>(0);
+  const { activeCategory } = useAppSelector((state) => state.filter);
+  const dispatch = useAppDispatch();
 
   return (
     <ul className={styles.categories}>
-      {categories.map((category: string, index: number) => {
+      {categories.map((category, index) => {
         return (
           <li
-            onClick={() => setActiveIndex(index)}
+            onClick={() => dispatch(setActiveCategory(index))}
             className={
-              activeIndex === index ? styles.activeCategory : styles.category
+              activeCategory === index ? styles.activeCategory : styles.category
             }
             key={index}
           >
