@@ -6,6 +6,7 @@ import Sort, { sortBy } from '../../Components/Sort';
 import ProductList from '../../Components/PrdouctList';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { fetchProducts } from '../../redux/slices/getProductsSlice';
+import Spinner from '../../utils/Spinner/Spinner';
 
 const Home = () => {
   const { isLoading } = useAppSelector((state) => state.getProducts);
@@ -39,7 +40,7 @@ const Home = () => {
           <Categories />
           <Sort />
         </div>
-        {isLoading ? null : <ProductList />}
+        {isLoading ? <Spinner /> : <ProductList />}
       </div>
     </div>
   );

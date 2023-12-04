@@ -15,12 +15,6 @@
   cursor: pointer;
 }
 
-.sortIconRotate {
-  cursor: pointer;
-  margin-right: 7px;
-  transition: all 0.3s;
-}
-
 .sortText {
   span {
     margin-left: 8px;
@@ -36,6 +30,7 @@
   border-radius: 18px;
   bottom: -105px;
   right: 0;
+  z-index: 5;
   position: absolute;
   width: 132px;
   min-height: 100px;
@@ -45,42 +40,11 @@
 
   .popupText {
     padding: 10px 14px;
+    cursor: pointer;
 
     &:hover {
-      cursor: pointer;
       background: rgba(254, 95, 30, 0.05);
       color: #fe5f1e;
     }
   }
-}
-
-.activeText {
-  background: rgba(254, 95, 30, 0.05);
-  color: #fe5f1e;
-  padding: 10px 14px;
-  cursor: pointer;
-}
-
-.activePopup {
-  transition: all 0.3s;
-  border-radius: 18px;
-  bottom: -105px;
-  right: 0;
-  position: absolute;
-  width: 132px;
-  min-height: 100px;
-  box-shadow: 0 15px 46px -20px rgba(0, 0, 0);
-  background: #fff;
-  padding: 14px 0;
-
-  .popupText {
-    padding: 10px 14px;
-
-    &:hover {
-      cursor: pointer;
-      background: rgba(254, 95, 30, 0.05);
-      color: #fe5f1e;
-    }
-  }
-  transform: scale(1);
 }

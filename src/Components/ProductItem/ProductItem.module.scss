@@ -70,6 +70,10 @@
         }
       }
 
+      &:active {
+        transform: scale(0.9);
+      }
+
       &:hover .btnText {
         color: #fff;
       }

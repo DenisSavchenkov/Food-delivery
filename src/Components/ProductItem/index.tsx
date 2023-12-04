@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import styles from './ProductItem.module.scss';
 import { Product } from '../../Types';
+import { useAppDispatch } from '../../redux/hooks';
+import { addProduct, cartProductType } from '../../redux/slices/cartSlice';
 
 const ProductItem: FC<Product> = ({
   imageURL,
@@ -8,7 +10,22 @@ const ProductItem: FC<Product> = ({
   weight,
   description,
   price,
+  id,
+  category,
 }) => {
+  const dispatch = useAppDispatch();
+
+  const cartProduct: cartProductType = {
+    imageURL,
+    title,
+    weight,
+    description,
+    price,
+    id,
+    category,
+    quantity: 1,
+  };
+
   return (
     <li className={styles.productItem}>
       <img className={styles.img} src={imageURL} alt="img" />
@@ -21,7 +38,10 @@ const ProductItem: FC<Product> = ({
       </div>
       <div className={styles.bottom}>
         <span className={styles.price}>{price} ₽</span>
-        <button className={styles.btn}>
+        <button
+          onClick={() => dispatch(addProduct(cartProduct))}
+          className={styles.btn}
+        >
           <svg
             width="12"
             height="12"
@@ -34,7 +54,7 @@ const ProductItem: FC<Product> = ({
               fill="#EB5A1E"
             />
           </svg>
-          <span className={styles.btnText}> Добавить</span>
+          <span className={styles.btnText}>Добавить</span>
         </button>
       </div>
     </li>

@@ -1,0 +1,89 @@
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  .top {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .topTitle {
+      color: #000;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.32px;
+      img {
+        margin-right: 17px;
+      }
+    }
+
+    .clearBtn {
+      color: #b6b6b6;
+      font-size: 16px;
+      background: transparent;
+      img {
+        margin-right: 7px;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: 20px;
+
+    .bottomInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      color: #000;
+      font-size: 28px;
+      letter-spacing: 0.22px;
+
+      .totalQuantity {
+        span {
+          font-weight: 700;
+          color: #fe5f1e;
+        }
+      }
+
+      .totalPrice {
+        span {
+          font-weight: 700;
+          color: #fe5f1e;
+        }
+      }
+    }
+
+    .bottomButtons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        font-size: 16px;
+        padding: 0 10px;
+        width: 211px;
+        height: 55px;
+        border-radius: 30px;
+      }
+
+      .backBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          margin-right: 10px;
+        }
+        border: 1px solid #d3d3d3;
+        background: transparent;
+        color: #d3d3d3;
+      }
+      .orderBtn {
+        background: #fe5f1e;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -25,8 +25,11 @@ const Categories: React.FC = () => {
         return (
           <li
             onClick={() => dispatch(setActiveCategory(index))}
-            className={
-              activeCategory === index ? styles.activeCategory : styles.category
+            className={styles.category}
+            style={
+              activeCategory === index
+                ? { background: '#000', color: '#fff' }
+                : undefined
             }
             key={index}
           >
