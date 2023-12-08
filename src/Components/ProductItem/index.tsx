@@ -3,6 +3,7 @@ import styles from './ProductItem.module.scss';
 import { Product } from '../../Types';
 import { useAppDispatch } from '../../redux/hooks';
 import { addProduct, cartProductType } from '../../redux/slices/cartSlice';
+import { Link } from 'react-router-dom';
 
 const ProductItem: FC<Product> = ({
   imageURL,
@@ -28,7 +29,9 @@ const ProductItem: FC<Product> = ({
 
   return (
     <li className={styles.productItem}>
-      <img className={styles.img} src={imageURL} alt="img" />
+      <Link to={`/products/${cartProduct.id}`}>
+        <img className={styles.img} src={imageURL} alt="img" />
+      </Link>
       <div className={styles.info}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Product } from '../../Types';
 
 export const fetchProducts = createAsyncThunk<Product[], string[]>(
-  'users/fetchByIdStatus',
+  'GET_PRODUCTS',
   async ([filterCategory, filterSort, filterOrder]) => {
     try {
       const { data } = await axios.get(

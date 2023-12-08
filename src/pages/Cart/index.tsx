@@ -7,10 +7,12 @@ import {
   cartProductType,
   deleteAllProducts,
 } from '../../redux/slices/cartSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Cart: FC = () => {
   const { cartProducts, totalPrice } = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   // Calc total quantity
   const productsQuantity = cartProducts.reduce(
@@ -56,8 +58,7 @@ const Cart: FC = () => {
             </span>
           </div>
           <div className={styles.bottomButtons}>
-            <button className={styles.backBtn}>
-              <img src="arrow-left.svg" alt="arrow" />
+            <button onClick={() => navigate(-1)} className={styles.backBtn}>
               Вернуться назад
             </button>
             <button className={styles.orderBtn}>Оплатить сейчас</button>

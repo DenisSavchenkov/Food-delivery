@@ -19,7 +19,7 @@ const CartBtn: FC = () => {
       <span className={styles.price}>{totalPrice} ₽</span>
       <div className={styles.column}></div>
       <div className={styles.count}>
-        <img src="cart-icon.svg" alt="cart-icon" />
+        <img src="/cart-icon.svg" alt="cart-icon" />
         <span>{productsQuantity}</span>
       </div>
     </Link>

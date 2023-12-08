@@ -76,12 +76,22 @@ const cartSlice = createSlice({
       if (action.payload) {
         state.cartProducts = [];
       }
+
+      //   Calc total price
+      state.totalPrice = state.cartProducts.reduce((sum, obj) => {
+        return sum + obj.price * obj.quantity;
+      }, 0);
     },
 
     deleteCurrentProduct: (state, action) => {
       state.cartProducts = state.cartProducts.filter((product) => {
         return product.id !== action.payload;
       });
+
+      //   Calc total price
+      state.totalPrice = state.cartProducts.reduce((sum, obj) => {
+        return sum + obj.price * obj.quantity;
+      }, 0);
     },
   },
 });

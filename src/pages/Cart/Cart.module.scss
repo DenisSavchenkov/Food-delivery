@@ -22,6 +22,7 @@
       color: #b6b6b6;
       font-size: 16px;
       background: transparent;
+      transition: all 0.2s;
       img {
         margin-right: 7px;
         transform: translateY(-2px);
@@ -78,11 +79,22 @@
         border: 1px solid #d3d3d3;
         background: transparent;
         color: #d3d3d3;
+        transition: all 0.3s;
+
+        &:hover {
+          border: 1px solid #919090;
+          color: #919090;
+        }
       }
       .orderBtn {
         background: #fe5f1e;
         color: #fff;
         font-weight: 700;
+        transition: all 0.3s;
+
+        &:hover {
+          background: #dd521b;
+        }
       }
     }
   }

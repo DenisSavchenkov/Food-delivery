@@ -4,6 +4,10 @@
   border-radius: 18px;
   background: #fff;
   box-shadow: 0 15px 46px -20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.03);
+  }
 
   .img {
     width: 100%;

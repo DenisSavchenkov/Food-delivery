@@ -7,7 +7,7 @@ const Header: FC = () => {
   return (
     <div className={styles.header}>
       <Link to="/" className={styles.logo}>
-        <img className={styles.logoImg} src="logo.png" alt="logo" />
+        <img className={styles.logoImg} src="/logo.png" alt="logo" />
         <div className={styles.logoInfo}>
           <h1 className={styles.logoTitle}>FOOD-DELIVERY</h1>
           <p className={styles.logoText}>Самая вкусная еда во вселенной</p>
@@ -21,7 +21,7 @@ const Header: FC = () => {
         />
         <img
           className={styles.searchIcon}
-          src="search-icon.svg"
+          src="/search-icon.svg"
           alt="search-icon"
         />
       </div>

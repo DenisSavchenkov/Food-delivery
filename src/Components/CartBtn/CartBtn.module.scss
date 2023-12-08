@@ -8,6 +8,11 @@
   padding: 12px 20px;
   border-radius: 30px;
   background: #fe5f1e;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #dd521b;
+  }
 
   .column {
     width: 1px;
