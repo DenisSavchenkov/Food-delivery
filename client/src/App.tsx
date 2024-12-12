@@ -7,14 +7,14 @@ import RegistrPage from './pages/RegistrPage/RegistrPage';
 
 const App = () => {
   return (
-    <>
+    <div className="wrapper">
       <Routes>
         <Route path="order" element={<OrderPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/registr" element={<RegistrPage />} />
       </Routes>
-    </>
+    </div>
   );
 };
 
