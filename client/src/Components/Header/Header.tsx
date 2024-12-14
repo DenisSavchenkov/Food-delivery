@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import styles from './Header.module.scss';
 import logoIcon from '/logo.png';
 import loginIcon from '/login-icon.svg';
@@ -7,7 +7,11 @@ import basketIcon from '/basket-icon.svg';
 import searchIcon from '/search-icon.svg';
 import cancelIcon from '/cancel-icon.svg';
 
-const Header = () => {
+interface HeaderProps {
+  setShowLogin: (param: boolean) => void;
+}
+
+const Header: FC<HeaderProps> = ({ setShowLogin }) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   return (
@@ -42,14 +46,17 @@ const Header = () => {
             />
           )}
         </label>
-        <Link to="/login" className={styles.profileButton}>
+        <button
+          onClick={() => setShowLogin(true)}
+          className={styles.profileButton}
+        >
           <img
             className={styles.profileIcon}
             src={loginIcon}
             alt="login-icon"
           />
           <span className={styles.profileText}>Вход</span>
-        </Link>
+        </button>
         <button className={styles.cardButton}>
           <img
             className={styles.basketIcon}

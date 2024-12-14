@@ -2,19 +2,24 @@ import './scss/global.scss';
 import { Routes, Route } from 'react-router';
 import HomePage from './pages/HomePage/HomePage';
 import OrderPage from './pages/OrderPage/OrderPage';
-import LoginPage from './pages/LoginPage/LoginPage';
-import RegistrPage from './pages/RegistrPage/RegistrPage';
+import Header from './Components/Header/Header';
+import LoginPopup from './Components/LoginPopup/LoginPopup';
+import { useState } from 'react';
 
 const App = () => {
+  const [showLogin, setShowLogin] = useState<boolean>(false);
+
   return (
-    <div className="wrapper">
-      <Routes>
-        <Route path="order" element={<OrderPage />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/registr" element={<RegistrPage />} />
-      </Routes>
-    </div>
+    <>
+      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
+      <div className="wrapper">
+        <Header setShowLogin={setShowLogin} />
+        <Routes>
+          <Route path="order" element={<OrderPage />} />
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </div>
+    </>
   );
 };
 

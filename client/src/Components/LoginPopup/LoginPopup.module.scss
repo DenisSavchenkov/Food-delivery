@@ -1,8 +1,22 @@
-.loginPage {
+.loginPopup {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+// Анимация попап
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .inner {
@@ -11,6 +25,7 @@
   max-width: 1000px;
   background-color: #ffffff;
   border-radius: 30px;
+  animation: fadeIn 1s;
 
   .img {
     padding: 0 50px;
@@ -23,8 +38,19 @@
   .info {
     border-left: 1px solid #d4d6e0;
     padding: 100px 70px 40px 70px;
+    position: relative;
+
+    .cancelIcon {
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      width: 25px;
+      cursor: pointer;
+    }
+
     .title {
       font-size: 36px;
+      text-align: center;
     }
 
     .form {
@@ -83,15 +109,18 @@
         font-size: 14px;
         text-align: center;
         color: #5b5b5e;
-        margin-bottom: 3px;
+        display: flex;
+        flex-direction: column;
       }
 
       .link {
+        margin-top: 5px;
         font-weight: 600;
         font-size: 14px;
         text-align: center;
         color: #fe724c;
         font-weight: 700;
+        cursor: pointer;
       }
     }
   }
