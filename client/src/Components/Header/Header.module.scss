@@ -1,5 +1,6 @@
 .header {
   padding: 66px 45px;
+  border-bottom: 1px solid #ededed;
 
   .inner {
     min-height: 51px;
@@ -36,7 +37,7 @@
       margin-right: 25px;
       .search {
         border-radius: 15px;
-        padding: 13px 15px 13px 45px;
+        padding: 13px 45px;
         width: 764px;
         height: 50px;
         background: #f9f9f9;

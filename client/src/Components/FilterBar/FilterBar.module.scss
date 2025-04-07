@@ -1,0 +1,82 @@
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .categories {
+    display: flex;
+
+    .category {
+      border-radius: 30px;
+      padding: 9px 15px;
+      background: #f1f1f1;
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+      margin-left: 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:first-child {
+        margin: 0;
+      }
+
+      &:hover {
+        background: #282828;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .sort {
+    position: relative;
+
+    display: flex;
+
+    img {
+      cursor: pointer;
+    }
+
+    p {
+      margin-left: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+
+      span {
+        color: #fe5f00;
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .sortPopup {
+    position: absolute;
+    top: 25px;
+    right: -4px;
+    border-radius: 10px;
+    width: 132px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.09);
+    background: #fff;
+
+    .sortBy {
+      font-weight: 700;
+      font-size: 15px;
+      padding: 10px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(254, 95, 30, 0.05);
+        color: #fe5f1e;
+      }
+    }
+    .activeSort {
+      background: rgba(254, 95, 30, 0.05);
+      color: #fe5f1e;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 10px 10px;
+      cursor: pointer;
+    }
+  }
+}

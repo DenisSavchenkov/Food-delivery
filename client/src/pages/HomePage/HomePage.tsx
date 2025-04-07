@@ -1,5 +1,12 @@
+import FilterBar from '../../Components/FilterBar/FilterBar';
+import styles from './HomePage.module.scss';
+
 const HomePage = () => {
-  return <div>HOME</div>;
+  return (
+    <div className={styles.homePage}>
+      <FilterBar />
+    </div>
+  );
 };
 
 export default HomePage;
